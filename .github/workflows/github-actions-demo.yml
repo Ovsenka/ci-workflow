@@ -4,4 +4,7 @@ jobs:
   workflow-demo:
     runs-on: ubuntu-latest
     steps:
-      - run: make say-hello
+      - name: checkout repo
+        uses: actions/checkout@main
+      - name: make hello
+        run: make say-hello
